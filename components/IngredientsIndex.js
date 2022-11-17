@@ -1,12 +1,10 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
-import ImageViewer from "./components/ImageViewer";
-import Button from "./components/Button";
 import axios from "axios";
 import { useEffect, useState } from "react";
+// import Button from "./components/Button";
 
-export default function App() {
+export default function IngredientsIndex() {
   const [ingredients, setIngredients] = useState([]);
+
   const handleIndexIngredients = () => {
     const baseUrl = "http://localhost:3000";
     axios.get(`${baseUrl}/ingredients`).then((response) => {
@@ -19,13 +17,12 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={{ color: "#fff" }}>Hello World!</Text>
       {ingredients.map((ingredient) => (
         <View style={styles.container} key={ingredient.id}>
           <Text style={{ color: "#fff", fontSize: 50, justifyContent: "center" }}>{ingredient.name}</Text>
           <Image source={ingredient.image_url} style={{ width: 400, height: 400 }}></Image>
           <View style={styles.footerContainer}>
-            <Button style={{ color: "#007AFF" }} label="more info" />
+            {/* <Button style={{ color: "#007AFF" }} label="more info" /> */}
             {/* <Button label="Use this photo" /> */}
           </View>
         </View>
