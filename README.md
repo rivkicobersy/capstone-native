@@ -9,3 +9,7 @@ Users can signup and the login or logout. Users can view all the ingredients in 
 I used ruby on rails to build my backend and react.js to build the frontend. I used bootstrap for the css framework and implemented a recipe finder API from edemam [edemam API](https://www.edamam.com).
 I started building a react native app as an alternate frontend.
 I installed a react heart library to favourite my recipes and a react calendar to plan my meals
+
+[Rails backend](https://github.com/rivkicobersy/capstone-api)
+
+[Reach frontend](https://github.com/rivkicobersy/capstone-frontend)
